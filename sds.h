@@ -271,4 +271,6 @@ void sds_free(void *ptr);
 int sdsTest(void);
 #endif
 
+#undef inline
+
 #endif
