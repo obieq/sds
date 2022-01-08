@@ -18,4 +18,6 @@ jobs:
       run: make
 
     - name: test
-      run: ./sds-test
+      run: |
+        make sds-test
+        ./sds-test
