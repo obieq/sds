@@ -381,6 +381,7 @@ string.
 ```c
 void sdstrim(sds s, const char *cset);
 void sdsrange(sds s, int start, int end);
+void sdssubstr(sds s, size_t start, size_t len);
 ```
 
 SDS provides both the operations with the `sdstrim` and `sdsrange` functions.
