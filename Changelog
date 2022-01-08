@@ -1,9 +1,21 @@
 Version 2.1
 ==
 
-* Merged security fixes and enhancements from redis
-* Merged pull requests from upstream repository
-* New function: sdssubstr
+Merged security fixes and enhancements from redisand pull requests from upstream repository
+
+* Feat: sdssubstr
+* Feat: sdscatfmt support of %c
+* Upd: readme improvements
+* Fix: integer overflow (CVE-2021-21309) 
+* Fix: bug in sdscatfmt when % is the last format char
+* Fix: potential overflow in sdsll2str 
+* Fix: integer overflow in _sdsMakeRoomFor (CVE-2021-41099)
+* Fix: sdssplitlen - set count to 0 if returned NULL
+* Fix: sdstrim - no need to compare the value of ep and sp
+* Fix: sdscatfmt call sdsMakeRoomFor, asked for more space than intended
+* Fix: avoid warnings with -Wshadow
+* Fix: add missing headerguard in sdsalloc.h
+
 
 Version 2.0
 ===
