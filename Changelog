@@ -1,3 +1,10 @@
+Version 2.1
+==
+
+* Merged security fixes and enhancements from redis
+* Merged pull requests from upstream repository
+* New function: sdssubstr
+
 Version 2.0
 ===
 

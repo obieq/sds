@@ -1,7 +1,15 @@
 Simple Dynamic Strings
 ===
 
-**Notes about version 2**: this is an updated version of SDS in an attempt
+## Notes about this fork
+
+This fork merges commits from redis and pending pull requests from the upstream repository.
+
+I will review and accept pull requests to enhance this library and add new features.
+
+## Notes about version 2
+
+This is an updated version of SDS in an attempt
 to finally unify Redis, Disque, Hiredis, and the stand alone SDS versions.
 This version is **NOT* binary compatible** with SDS version 1, but the API
 is 99% compatible so switching to the new lib should be trivial.
