@@ -455,7 +455,17 @@ int sdsll2str(char *s, long long value) {
 
     /* Generate the string representation, this method produces
      * an reversed string. */
-    v = (value < 0) ? -value : value;
+    if (value < 0) {
+        /* Since v is unsigned, if value==LLONG_MIN, -LLONG_MIN will overflow. */
+        if (value != LLONG_MIN) {
+            v = -value;
+        } else {
+            v = ((unsigned long long)LLONG_MAX) + 1;
+        }
+    } else {
+        v = value;
+    }
+
     p = s;
     do {
         *p++ = '0'+(v%10);
