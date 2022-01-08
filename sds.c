@@ -832,7 +832,10 @@ sds *sdssplitlen(const char *s, ssize_t len, const char *sep, int seplen, int *c
     }
 
     tokens = s_malloc(sizeof(sds)*slots);
-    if (tokens == NULL) return NULL;
+    if (tokens == NULL) {
+        *count = 0;
+        return NULL;
+    }
 
     for (j = 0; j < (len-(seplen-1)); j++) {
         /* make sure there is room for the next element and the final one */
