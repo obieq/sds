@@ -3,7 +3,7 @@ Simple Dynamic Strings
 
 **Notes about version 2**: this is an updated version of SDS in an attempt
 to finally unify Redis, Disque, Hiredis, and the stand alone SDS versions.
-This version is **NOT* binary compatible** with SDS verison 1, but the API
+This version is **NOT* binary compatible** with SDS version 1, but the API
 is 99% compatible so switching to the new lib should be trivial.
 
 Note that this version of SDS may be a slower with certain workloads, but
@@ -467,7 +467,7 @@ buffers that are easy to manage.
 String copying
 ---
 
-The most dangerous and infamus function of the standard C library is probably
+The most dangerous and infamous function of the standard C library is probably
 `strcpy`, so perhaps it is funny how in the context of better designed dynamic
 string libraries the concept of copying strings is almost irrelevant. Usually
 what you do is to create strings with the content you want, or concatenating
@@ -794,7 +794,7 @@ output> 109
 output> 59
 ```
 
-NOTE: SDS low-level API use cammelCase in order to warn you that you are playing with the fire.
+NOTE: SDS low-level API use camelCase in order to warn you that you are playing with the fire.
 
 Manual modifications of SDS strings
 ---
