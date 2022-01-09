@@ -606,6 +606,7 @@ sds sdscatprintf(sds s, const char *fmt, ...) {
  * However this function only handles an incompatible subset of printf-alike
  * format specifiers:
  *
+ * %c - char
  * %s - C String
  * %S - SDS string
  * %i - signed int
